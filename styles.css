@@ -1,0 +1,33 @@
+* {
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: rgba(234, 239, 247, 1);
+    background-color: #265FB1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "";
+    gap: 8px 8px;
+}
+
+.grid-container_box {
+    border: 0.5px solid #88A7D4;
+}
+
+@media (min-width: 1200px) and (max-width: 2100px) {
+    main {
+        width: 832px;
+        height: 832px;
+        background-color: #0A182C;
+        margin: 5vh auto;
+        box-shadow: 0 0 40px rgba(10, 24, 44, 0.5);
+    }
+}
