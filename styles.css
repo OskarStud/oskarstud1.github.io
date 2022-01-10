@@ -46,11 +46,13 @@ p {
 }
 
 .grid-container_box {
+    position: relative;
     padding: 4px 8px;
     border: 0.5px solid #88A7D4;
 }
 
 .header {
+  position: relative;
   padding-top: 0;
   padding-left: 0;
   grid-area: header;
@@ -58,17 +60,15 @@ p {
 }
 
 .header ul {
-  display: flex;
-  align-items: center;
-
-  text-align: right;
+  position: absolute;
+  right: 0px;
   display: inline-block;
-  margin-left: 100px;
+  text-align: right;
   list-style-type: none;
 
+  line-height: 26px;
   font-size: 18px;
   font-weight: 500;
-  line-height: 40px;
 }
 
 li img {
@@ -80,30 +80,41 @@ li img {
 .experience {
   grid-area: experience;
 }
-
 .grid-container_box__inner {
- display: flex;
- align-items: baseline;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 18px;
 }
 
-.grid-container_box__inner__left{
+.grid-container_box__inner__left {
+  display: inline-block;
   display: flex;
   flex-direction: column;
-  width: : 153px;
+  flex-shrink: 0;
 }
 
-.grid-container_box__inner__left:first-child {
+.grid-container_box__inner__left span:nth-child(1) {
   font-size: 14px;
+  line-height: 19px;
   color: #EAEFF7;
 }
 
-.grid-container_box__inner__left:last-child {
+.grid-container_box__inner__left span:nth-child(2) {
+
+  font-size: 10px;
+  line-height: 19px;
+  color: #EAEFF7;
+}
+
+.grid-container_box__inner__left span:last-child {
+
   font-size: 12px;
+  line-height: 16px;
   color: #A7ACCF;
 }
 
 .grid-container_box__inner__right {
-  margin-left: 40px;
+  padding-left: 40px;
 }
 
 .grid-container_box__inner__right p{
@@ -113,6 +124,11 @@ li img {
 
 .skills {
   grid-area: skills;
+}
+
+.skills p {
+  line-height: 20px;
+  font-size: 14px;
 }
 
 .courses {
