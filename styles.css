@@ -135,7 +135,35 @@ li img {
   grid-area: courses;
 }
 
+.courses > .grid-container_box__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.grid-container_box__inner__courses {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-container_box__inner__courses span:first-child {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.grid-container_box__inner__courses span:nth-child(2){
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.grid-container_box__inner__courses span:last-child{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #A7ACCF;
+}
 
 @media (min-width: 1200px) and (max-width: 2100px) {
     main {
