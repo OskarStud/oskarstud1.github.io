@@ -1,0 +1,187 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-width: 320px;
+	background-color: #1b2473;
+	font-family: 'Press Start 2P', sans-serif;
+}
+
+form {
+	background-color: #fff;	
+	border-radius: 20px;
+	color: #787878;
+	box-shadow: 0 0 40px 10px rgba(0, 0, 0, .25);
+}
+
+h1 {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+li > label {
+	display: block;
+	font-size: 16px;
+	padding: 0 0 3px 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+
+	border: 2px solid #787878;
+	border-radius: 10px;
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 15px;
+	padding-left: 15px;
+	color: #787878;
+}
+
+#form_password::placeholder, #form_email::placeholder {
+		color: #cccccc;
+		font-family: 'Press Start 2P', sans-serif;
+		font-size: 11px;
+	}
+
+.container_checkbox {
+	position: relative;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+}
+
+.container_checkbox input {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+.container_checkbox label {
+	font-size: 11px;
+	display: block;
+	flex-shrink: 1;
+}
+
+.form_checkbox-mark {
+	margin-right: 10px;
+	width: 24px;
+	height: 24px;
+	display: inline-block; 
+	border: 2px solid #787878;
+	border-radius: 7px;
+	flex-shrink: 0;
+
+}
+
+.container_checkbox input:checked + .form_checkbox-mark {
+	background: url(./img/mark.png) no-repeat;
+	background-position:center;
+	background-size: 95%;
+}
+
+button {
+	border: none;
+	border-radius: 10px;
+	background-color: #1a226b;
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 24px;
+	color: #fff;
+	transition: opacity .3s;
+}
+
+button:hover {
+	opacity: 0.6;
+}
+
+
+@media screen and (max-width: 1920px) and (min-width: 769px) {
+
+	form{
+		margin: 0 auto;
+		margin-top: 82px;
+		width: 600px;
+		height: 412px;
+	}
+
+	h1 {
+		padding-top: 26px;
+	}
+
+	ul {
+		padding:0 45px;
+	}
+
+	li {
+		padding-top:16px ;
+	}
+
+	input[type="email"],
+	input[type="password"] {
+		height: 49px;
+		width: 509px;
+	}
+
+
+	button {
+		width: 180px;
+		height: 52px;
+	}
+
+
+
+	.container_button {
+		margin-top: 52px;
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+
+
+	main {
+		padding: 20px;
+	}
+
+	h1 {
+		padding-top: 38px;
+	}
+
+	form {
+		height: 100vh;
+		padding: 0 45px;
+	}
+
+	li {
+		padding-top:2vh;
+	}
+
+	input[type="email"],
+	input[type="password"] {
+		height: 49px;
+		width: 100%;
+	}
+
+	button {
+		width: 220px;
+		height: 80px;
+	}
+
+.container_button {
+		margin-top: 64px;
+		text-align: center;
+	}
+
+
+
+}
+
