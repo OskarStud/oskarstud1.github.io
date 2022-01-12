@@ -5,7 +5,6 @@
 }
 
 body {
-	min-width: 320px;
 	background-color: #1b2473;
 	font-family: 'Press Start 2P', sans-serif;
 }
@@ -42,7 +41,8 @@ input[type="password"] {
 	color: #787878;
 }
 
-#form_password::placeholder, #form_email::placeholder {
+#form_password::placeholder,
+#form_email::placeholder {
 		color: #cccccc;
 		font-family: 'Press Start 2P', sans-serif;
 		font-size: 11px;
@@ -66,6 +66,7 @@ input[type="password"] {
 }
 
 .container_checkbox label {
+	opacity: .9;
 	font-size: 11px;
 	display: block;
 	flex-shrink: 1;
@@ -82,10 +83,11 @@ input[type="password"] {
 
 }
 
-.container_checkbox input:checked + .form_checkbox-mark {
-	background: url(./img/mark.png) no-repeat;
-	background-position:center;
-	background-size: 95%;
+.container_checkbox input:checked + .form_checkbox-mark::after {
+	content: '✔';
+	color: #1a226b;
+	position: absolute;
+	left: 6px;
 }
 
 button {
@@ -102,6 +104,42 @@ button:hover {
 	opacity: 0.6;
 }
 
+/* Небольшие добавления от себя */
+
+.social_media > ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+
+.social_media_links li {
+	margin: 0 auto;
+}
+
+.social_media_links img {
+	height: 50px;
+	
+}
+
+.social_media_links li:last-child {
+	filter: grayscale(100%);	
+}
+
+.social_media_links li:nth-child(2) {
+	filter: sepia(100%);
+}
+
+.social_media_links li:first-child {
+	filter: saturate(6);
+}
+
+.social_media_links li:hover {
+	filter: unset;
+}
+
+
+
+
 
 @media screen and (max-width: 1920px) and (min-width: 769px) {
 
@@ -109,7 +147,7 @@ button:hover {
 		margin: 0 auto;
 		margin-top: 82px;
 		width: 600px;
-		height: 412px;
+		height: 500px;
 	}
 
 	h1 {
@@ -144,6 +182,9 @@ button:hover {
 	}
 
 }
+	
+
+
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
 
