@@ -1,2 +1,2 @@
 # portfolio
-Portfolio for Frontend Designer
+Portfolio for Frontend Developer/Designer
