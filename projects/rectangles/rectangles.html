@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangles</title>
+    <style type="text/css">
+        button {
+            display: inline-block;
+            position: absolute;
+            left: 300px;
+            top: 50px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <button onclick="location.reload();">Обновить рисунок</button>
+    <canvas width="800px" height="800px"></canvas>
+    <script>
+        let canvas = document.querySelector('canvas');
+        let context = canvas.getContext('2d');
+
+        context.lineWidth = 6;
+        context.beginPath();
+        context.rect(200, 200, 400, 400);
+        
+        for(let i=0; i < 6; i++) {
+            for (let j=0; j < 6; j++) {
+            let height = 70;
+            let width = 70;
+            let gap = 20;
+            let x = 100 + (width + gap) * i;
+            let y = 100 + (height + gap) * j;
+            
+            context.beginPath();
+            context.lineWidth = 4;
+            context.strokeStyle = "#62BBC1";
+            context.rect(x, y, width, height);
+            context.stroke();
+            
+            if (Math.random() >= 0.5) {
+            context.beginPath();
+            context.lineWidth = 6;
+            context.strokeStyle = "#62BBC1"
+            context.rect(x+10, y+10, width-20, height-20);
+            context.stroke();
+            }
+            
+            }
+        }
+    </script>
+</body>
+</html>
