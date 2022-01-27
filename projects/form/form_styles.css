@@ -27,7 +27,10 @@ ul {
 li > label {
 	display: block;
 	font-size: 16px;
-	padding: 0 0 3px 8px;
+}
+
+label > span {
+	padding: 0 0 4px 8px;
 }
 
 input[type="email"],
@@ -137,7 +140,9 @@ button:hover {
 	filter: unset;
 }
 
-
+.error-message {
+	
+}
 
 
 
@@ -159,7 +164,7 @@ button:hover {
 	}
 
 	li {
-		padding-top:16px ;
+		padding-top:22px ;
 	}
 
 	input[type="email"],
@@ -177,7 +182,7 @@ button:hover {
 
 
 	.container_button {
-		margin-top: 52px;
+		margin-top: 32px;
 		text-align: center;
 	}
 
