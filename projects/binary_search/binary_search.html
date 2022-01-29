@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p id="startText">
+        Guess an integer between 0 and 100 and algorithm can guess it
+    </p>
+    <button onclick="start()" id="startButton">
+        Let's go!
+    </button>
+
+    <p id="question"></p>
+    <button onclick="lessClick()" id="lessButton" class="hideFromScreen">Less</button>
+    <button onclick="guessClick()" id="guessButton" class="hideFromScreen">Guess!</button>
+    <button onclick="moreClick()" id="moreButton" class="hideFromScreen">More</button>
+
+
+    <script>
+        let minInteger = 0;
+        let maxInteger = 100;
+        let middleInteger = Math.floor((minInteger+maxInteger)/2);
+        let tryNumber = 1;
+
+        function start() {
+            document.getElementById('startText').classList.add("hideFromScreen");
+            document.getElementById('startButton').classList.add("hideFromScreen");
+
+            document.getElementById("question").classList.remove("hideFromScreen");
+            document.getElementById("question").innerHTML = "Try number " + tryNumber + "</br>" + "Guess integer: " + middleInteger;
+
+            document.getElementById("lessButton").classList.remove("hideFromScreen");
+            document.getElementById("guessButton").classList.remove("hideFromScreen");
+            document.getElementById("moreButton").classList.remove("hideFromScreen");
+        }
+
+        function lessClick() {
+            maxInteger = middleInteger;
+            middleInteger = Math.floor((minInteger + maxInteger)/2);
+            if (maxInteger == middleInteger) {
+                middleInteger -= 1;
+            }
+            checkResult();
+        }
+
+        function moreClick() {
+            minInteger = middleInteger;
+            middleInteger = Math.floor((minInteger + maxInteger)/2);
+            if (minInteger == middleInteger) {
+                middleInteger += 1;
+            }
+            checkResult();
+        }
+
+        function guessClick () {
+            minInteger = middleInteger;
+            maxInteger = middleInteger;
+
+            checkResult();
+        }
+
+        function checkResult() {
+            if (minInteger == maxInteger) {
+                document.getElementById("question").innerHTML = "Your guess number: " + minInteger;
+                document.getElementById("lessButton").classList.add("hideFromScreen");
+				document.getElementById("guessButton").classList.add("hideFromScreen");
+				document.getElementById("moreButton").classList.add("hideFromScreen");
+
+                return;
+            }
+            tryNumber += 1;
+            document.getElementById("question").innerHTML = "Try Number " + tryNumber + ": " + middleInteger;
+        }
+
+       
+    </script>
+</body>
+</html>

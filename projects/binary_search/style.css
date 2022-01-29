@@ -1,0 +1,19 @@
+body {
+    font-family: 'Dongle', sans-serif;
+    text-align: center;
+    margin: 20px;
+    font-size: 4vh;
+}
+
+button {
+    margin: 0 10px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 24px;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.hideFromScreen {
+    display:none;
+}
